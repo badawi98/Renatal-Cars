@@ -1,0 +1,107 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.signup-button{
+  margin-left: 200px;
+}
+.col-one-margin {
+  margin-left: -180px; 
+  padding-left: 100px
+}
+.img-style {
+  margin-left: 100px; 
+  margin-right: -150px;
+}
+.hr-width {
+  width: 1500px; 
+  margin-left: -220px;
+}
+.first-col-feature {
+  background-color: #DED496;
+  margin-right: 30px;
+  margin-left: -60px;
+}
+.second-col-feature {
+  background-color: #9DB2B4;
+  margin-right: 30px;
+}
+.third-col-feature {
+  background-color: #EAFFEE;
+
+}
+.first-feature-icon {
+  margin-left: 135px;
+  margin-bottom: 20px;
+}
+.second-feature-icon {
+  margin-left: 125px;
+  margin-bottom: 20px;
+}
+.third-feature-icon {
+  margin-left: 145px;
+  margin-bottom: 20px;
+}
+.first-h-feature {
+  margin-left: 75px;
+}
+.second-h-feature {
+  margin-left: 75px;
+}
+.third-h-feature {
+  margin-left: 100px;
+}
+.first-p-feature {
+  margin-left: 100px;
+}
+.firs-next-p-feture {
+  margin-left: 110px;
+}
+.second-p-feature {
+  margin-left: 100px;
+}
+.second-next-p-feture {
+  margin-left: 130px;
+}
+.third-p-feature {
+  margin-left: 110px;
+}
+.third-next-p-feture {
+  margin-left: 140px;
+}
+.h1-second-div {
+  margin-left: 400px;
+  margin-bottom: 100px;
+}
+.first-img-car {
+  margin-left: 100px;
+  margin-bottom: 20px;
+}
+.first-img-h-car {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+.first-img-brand-car {
+  margin-left: 50px;
+  color: gray;
+   margin-right: 120px;
+}
+.first-img-price-car {
+  color: blue;
+}
+.first-img-day-car {
+  color: black;
+}
+.buy-now-button {
+  margin-left: 40px;
+  margin-right: 95px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+.details-button {
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+a { color: inherit; } 
