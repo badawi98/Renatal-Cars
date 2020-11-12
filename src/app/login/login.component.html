@@ -3,6 +3,7 @@
   <div 
     class="d-flex align-items-center justify-content-center" 
     style="height: 500px;">    
+    <form #postForm="ngForm" (ngSubmit)="onLogin(postForm.value)">  
       <div class="form-group">
         <h1 
           class="font-italic" 
@@ -12,12 +13,18 @@
           type="text" 
           class="form-control" 
           id="usr" 
+          ngModel
+          required
+          name="username"
           placeholder="Username">
         <br>
         <input 
           type="text" 
           class="form-control" 
           id="pass" 
+          ngModel
+          required
+          name="password"
           placeholder="password">
         <br>
         <p 
@@ -25,18 +32,30 @@
           class="text-primary">
           Forget password?</p>     
         <button 
-          type="button" 
+          type="submit"
+            [disabled]="!postForm.valid"
           class="btn btn-primary btn-lg btn-block"
           >Login</button>
         <br>
         <br>
         <p>Don't have an account ?<span class="text-primary">Creat Your account</span> </p>
       </div>
-      <br>   
+      </form>   
   </div>
 </div>
-
-
+<div class="row">
+  <div class="col-xs-12 col-md-6 col-md-offset-3">
+    <p *ngIf="!isExist && !isFetching"> No Users Please login First</p>
+    <ul class="list-group" *ngIf="loadedPosts.length >= 1 && !isFetching">
+      <li class="list-group-item" *ngIf="isExist">
+        <h1>{{ responeData.name }}</h1>
+        <h2>{{ responeData.email }}</h2>
+        
+      </li>
+    </ul>
+    <p *ngIf="isFetching">Loading...</p>
+  </div>
+</div>
   
 
   

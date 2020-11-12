@@ -2,50 +2,78 @@
     class="border border-light p-3 mb-4">
     <div 
       class="d-flex align-items-center justify-content-center" 
-      style="height: 500px;">    
+      style="height: 500px;">  
+      <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">  
         <div class="form-group">
           <h1 
           class="font-italic" 
           class="text-center">Register Info</h1>
           <p>Don't have an account ? <span class="text-primary">Login</span> </p>
           <input 
+            name="Name"
             type="text" 
-            class="form-control" 
+            class="form-control"
+            ngModel
+            required 
             placeholder="Name">
           <br>
           <input 
+            name="email"
             type="email" 
-            class="form-control" 
+            class="form-control"
+            ngModel
+            required  
             placeholder="E-mail">
           <br>
           <div class="form-row">
             <div class="form-group col-md-6">
-              <input type="date" placeholder="Birthday" class="form-control" id="inputCity">
+              <input 
+                type="date" 
+                name="birthday"
+                placeholder="Birthday" 
+                class="form-control" 
+                ngModel
+                required>
             </div>
             <div class="form-group col-md-4">
-              <select id="inputState" class="form-control"> 
+              <select 
+                id="inputState" 
+                name="gender"
+                class="form-control" 
+                ngModel
+                required> 
                 <option value="" selected disabled>Gender</option>
                 <option>male</option>
                 <option>Female</option>
               </select>
             </div>  
             <input 
-              type="password" 
+              type="password"
+              name="password"
+              ngModel
+              required 
               class="form-control" 
               placeholder="password">
           <br>   <br>
           <input 
               type="password" 
+              name="rePassword"
+              ngModel
+              required
               class="form-control" 
               placeholder="re-password">
           <br> <br>
           <input 
               type="text" 
+              name="username"
+              ngModel
+              required
               class="form-control" 
               placeholder="Username">
           <br> <br>
           <button 
-            type="button" 
+            type="submit"
+            [disabled]="!postForm.valid"
             class="btn btn-primary btn-lg btn-block"
             >Register</button>
           <br>
@@ -53,8 +81,9 @@
         </div>
         <br>   
     </div>
+    </form>
   </div>
-  
+
   
     
   
